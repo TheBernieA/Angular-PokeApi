@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="left">
+    <h4 class="mb-3">Pokemon rifiutati: {{refuse.length}}</h4>
+    <ul class="refused" *ngFor="let refPokemon of refuse">
+      <li class="mb-3">
+        <div class="image">
+          <img src={{refPokemon.sprites.back_default}} alt="" />
+          <div>#{{refPokemon.id}} {{refPokemon.name}}</div>
+        </div>
+        <div class="sign">{{refPokemon.types[0].type.name}}</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="wrapper">
+    <div class="detail">
+      <h4 class="mb-3">Dettagli</h4>
+      <h3 class="mb-2">ID: {{pokemon.id}}</h3>
+      <h3 class="mb-2">Name: {{pokemon.name}}</h3>
+      <h3 class="mb-2">Weight:{{pokemon.weight}}</h3>
+      <h3 class="mb-2">Height:{{pokemon.height}}</h3>
+    </div>
+
+    <div class="pokemon-on-display">
+      <div class="name-container">
+        <h3>{{pokemon.name}}</h3>
+      </div>
+    </div>
+    <div class="image">
+      <img src={{pokemon.sprites.back_default}} alt="" />
+    </div>
+    <div class="button-container">
+      <button (click)="getPokemon(true)" class="left-btn">Cattura</button>
+      <button (click)="getPokemon(false)" class="right-btn">Rifiuta</button>
+    </div>
+    <div class="description">E' apparso un selvatico!</div>
+  </div>
+
+  <div class="right">
+    <ul class="captured" *ngFor="let pokemon of capture">
+      <li>
+        <div [routerLink]="['/details', pokemon.id]" class="image">
+          <img src={{pokemon.sprites.back_default}} alt="" />
+        </div>
+        <h3>{{pokemon.name}}</h3>
+        <button (click)="onDeleted(pokemon)">Delete</button>
+      </li>
+    </ul>
+  </div>
+</div>

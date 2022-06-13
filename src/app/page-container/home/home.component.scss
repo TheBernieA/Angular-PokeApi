@@ -1,0 +1,219 @@
+  
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url("../../../assets/images/download.jpg") no-repeat;
+    background-size: cover;
+
+
+    .wrapper {
+      position: relative;
+      width: 860px;
+      height: 80%;
+      background: linear-gradient(#0866F3, #07D735);
+      border-radius: 1rem;
+      overflow: hidden;
+  
+      .description {
+        padding: 2rem;
+        height: 120px;
+        width: 100%;
+        background: #2F37F2;
+        position: absolute;
+        bottom: 0;
+        border-radius: 1rem;
+        color: white;
+      }
+  
+      .pokemon-on-display {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        width: 100%;
+  
+  
+        .name-container {
+          position: absolute;
+          right: 0;
+          top: 5%;
+          background: #FFF50E;
+          padding-left: 2rem;
+          width: 299.3px;
+          height: 50px;
+          border-radius: 1rem 0 0 1rem;
+        }
+      }
+  
+      .detail {
+        position: absolute;
+        top: 25%;
+        left: 15%;
+        background: #F1FF9D;
+        width: 20%;
+        height: 30%;
+        border-radius: 1rem;
+        padding: 1rem;
+  
+        h4 {
+          text-align: center;
+        }
+  
+        h3 {
+          font-size: .9rem;
+        }
+      }
+  
+      .image {
+        position: absolute;
+        top: 25%;
+        right: 15%;
+        width: 30%;
+        height: 30%;
+        border-radius: 1rem;
+        padding: 1rem;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      .button-container {
+        position: absolute;
+        bottom: 25%;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+        gap: 2rem;
+  
+        button {
+          border: none;
+          padding: 1rem 3rem;
+          color: black;
+          border-radius: 1rem
+        }
+  
+        .left-btn {
+          background: #8BE843;
+        }
+  
+        .right-btn {
+          background: #E84343;
+  
+        }
+      }
+    }
+
+    .right {
+      background: #7697FF;
+      width: 10%;
+      height: 80%;
+      border-radius: 1rem 0 0 1rem;
+      border-bottom: 1px solid;
+      overflow: hidden;
+      cursor: pointer;
+  
+  
+      .captured {
+        width: 100%;
+        height: fit-content;
+        list-style: none;
+  
+        li {
+          width: 100%;
+          height: calc(100% / 6);
+          border-bottom: 1px solid rgba($color: #000000, $alpha: .4);
+          text-align: center;
+  
+          image {
+            width: 100%;
+            height: 100%;
+  
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+  
+          h3 {
+            font-size: .9rem;
+            color: white;
+          }
+        }
+      }
+    }
+
+    
+    .left {
+      background: #81B160;
+      width: 20%;
+      height: 80%;
+      border-radius: 0 1rem 0 0;
+      text-align: center;
+      padding: 1rem 0;
+      overflow-y: auto;
+  
+      .refused {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style: none;
+  
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: calc(100% / 6);
+          border-bottom: 1px solid;
+          text-align: center;
+          background: #A6CFFD;
+          padding: 2rem .3rem;
+          .image {
+            display: flex;
+            align-items: center;
+            img {
+              width: 50px;
+              object-fit: cover;
+            }
+            p{
+              width: fit-content;
+            }
+          }
+  
+          .sign {
+            width: fit-content;
+            border: none;
+            background: green;
+            border-radius: 1rem;
+            padding: .2rem 0.5rem;
+          }
+        }
+      }
+    }
+  
+  
+  
+
+    ::-webkit-scrollbar{
+      width: 9px;
+      background: lightgray;
+    }
+    ::-webkit-scrollbar-thumb{
+      width: 100%;
+      border-radius: 1rem;
+      background: #E84343;
+    }
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+  }
+  
